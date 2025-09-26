@@ -1,65 +1,91 @@
-.hero {
-    background-image: url('path/to/hero-image.jpg');
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/** Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    color: white;
 }
 
-.hero h1 {
-    font-size: 3rem;
+header h1 {
+    margin: 0;
 }
 
-.portfolio-gallery {
+/* Hero section styling */
+.hero {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+/* Portfolio grid layout */
+.portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
 }
 
-.portfolio-gallery img {
-    width: 100%;
-    border-radius: 8px;
+.portfolio-item {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
 }
 
+/* Services cards */
 .services {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
-.service-item {
-    margin: 20px;
-    text-align: center;
+.service-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 1rem;
+    flex: 1;
+    margin: 0 1rem;
 }
 
+/* Contact form styling */
 .contact-form {
-    display: flex;
-    flex-direction: column;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.contact-form button {
-    padding: 10px;
-    background-color: #5a67d8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #434190;
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    .services {
+        flex-direction: column;
+    }
 }
